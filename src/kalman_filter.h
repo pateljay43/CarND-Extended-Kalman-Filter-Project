@@ -2,7 +2,12 @@
 #define KALMAN_FILTER_H_
 #include "Eigen/Dense"
 
+using namespace Eigen;
+
 class KalmanFilter {
+private:
+  void UpdateWithY(const VectorXd &y);
+  
 public:
 
   // state vector
